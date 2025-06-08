@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清华大学</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <h1>清华大学</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">返回首页</a></li>
+            <li><a href="school2.html">北京大学</a></li>
+            <li><a href="school3.html">复旦大学</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="school-info">
+            <h2>学校简介</h2>
+            <p>清华大学是中国著名高等学府，坐落于北京西北郊风景秀丽的清华园。</p>
+            <p>创建于1911年，是中华人民共和国教育部直属的全国重点大学。</p>
+        </section>
+
+        <section class="add-info">
+            <h2>添加信息</h2>
+            <form id="info-form">
+                <div class="form-group">
+                    <label for="title">标题</label>
+                    <input type="text" id="title" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="content">内容</label>
+                    <textarea id="content" rows="5" required></textarea>
+                </div>
+
+                <button type="submit">提交信息</button>
+            </form>
+        </section>
+
+        <section class="display-info" id="display-area">
+            <!-- 这里会显示添加的信息 -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 我的学校信息网站</p>
+    </footer>
+
+    <script>
+        document.getElementById('info-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const title = document.getElementById('title').value;
+            const content = document.getElementById('content').value;
+
+            const displayArea = document.getElementById('display-area');
+            const newInfo = document.createElement('div');
+            newInfo.className = 'info-item';
+            newInfo.innerHTML = `
+                <h3>${title}</h3>
+                <p>${content}</p>
+                <hr>
+            `;
+
+            displayArea.appendChild(newInfo);
+
+            // 清空表单
+            document.getElementById('info-form').reset();
+        });
+    </script>
+</body>
+</html>
