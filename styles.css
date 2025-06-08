@@ -61,9 +61,15 @@ main {
 }
 
 .avatar {
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+    aspect-ratio: 1/1;  /* 保持1:1宽高比 */
+    object-fit: cover;
     border-radius: 50%;
-    margin: 1rem 0;
     border: 3px solid #2c3e50;
+    margin: 1rem auto;  /* 水平居中 */
+    display: block;
 }
 
 footer {
@@ -109,4 +115,128 @@ button {
 
 button:hover {
     background-color: #1a252f;
+}
+.downloads {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.downloads ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.downloads li {
+    margin: 0.8rem 0;
+    padding: 0.5rem;
+    border-bottom: 1px dashed #ddd;
+}
+
+.downloads a {
+    color: #2c3e50;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.downloads a:hover {
+    color: #e74c3c;
+}
+
+.file-size {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+}
+/* 官方链接容器 */
+.official-links {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px; /* 链接间距 */
+}
+
+/* 基础链接样式 */
+.official-link {
+    color: white;
+    background-color: #e31937;
+    padding: 8px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+/* 研究生院链接特殊样式 */
+.graduate-link {
+    background-color: #e74c3c; /* 红色区分 */
+}
+
+/* 悬停效果 */
+.official-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* 移动端适配 */
+@media (max-width: 600px) {
+    .official-links {
+        position: static;
+        justify-content: center;
+        margin: 10px 0;
+    }
+}
+/* 表格容器 */
+.table-wrapper {
+    overflow-x: auto; /* 小屏幕横向滚动 */
+    margin: 20px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+/* 基础表格样式 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+/* 表头样式 */
+thead {
+    background-color: #2c3e50;
+    color: white;
+}
+
+th {
+    padding: 12px 15px;
+    text-align: left;
+    position: sticky;
+    top: 0;
+}
+
+/* 表格内容样式 */
+td {
+    padding: 10px 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* 隔行变色效果 */
+tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+/* 悬停高亮 */
+tbody tr:hover {
+    background-color: #e8f4ff;
+}
+
+/* 响应式调整 */
+@media (max-width: 600px) {
+    th, td {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
 }
