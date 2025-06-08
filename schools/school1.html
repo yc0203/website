@@ -3,53 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>清华大学</title>
+    <title>西安电子科技大学</title>
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
     <header>
-        <h1>清华大学</h1>
+        <div class="logo-container">
+        <img src="https://github.com/yc0203/ycimages/blob/dabb83d75cfe47c957af5d3cd24d9799af2fecb3/img/xidian.png?raw=true"
+             alt="西安电子科技大学校徽"
+             class="avatar"> <!-- 允许跨域资源校验 -->
+        <h1>西安电子科技大学</h1>
+        </div>
+        <!-- 新增：官网跳转链接（固定在右上角） -->
+        <div class="official-links">
+        <!-- 主官网链接 -->
+        <a href="https://gr.xidian.edu.cn/info/1074/13984.htm" class="official-link" target="_blank">
+            招生简章
+        </a>
+        <!-- 新增研究生院链接 -->
+        <a href="https://gr.xidian.edu.cn/info/1074/14014.htm" class="official-link graduate-link" target="_blank">
+            自命题考试大纲
+        </a>
+    </div>
     </header>
-
     <nav>
         <ul>
             <li><a href="../index.html">返回首页</a></li>
-            <li><a href="school2.html">北京大学</a></li>
-            <li><a href="school3.html">复旦大学</a></li>
+            <li><a href="school2.html">电子科技大学</a></li>
+            <li><a href="school3.html">西北工业大学</a></li>
         </ul>
     </nav>
 
     <main>
         <section class="school-info">
             <h2>学校简介</h2>
-            <p>清华大学是中国著名高等学府，坐落于北京西北郊风景秀丽的清华园。</p>
-            <p>创建于1911年，是中华人民共和国教育部直属的全国重点大学。</p>
+            <p>西安电子科技大学（Xidian University）简称“西电”，是国家教育部直属、以电子与信息学科为特色，工、理、管、文、经等多学科协调发展的全国重点大学，位列国家“双一流”、“211工程”、“985工程优势学科创新平台”建设高校；是全国首批9所设有国家示范性微电子学院、
+                首批9所设有国家集成电路人才培养基地、首批2所设有全国网络安全人才培养试点基地、首批7所设有一流网络安全学院、首批33所设有特色化示范性软件学院的高校之一、全国8所设有国家集成电路产教融合创新平台、5所承担建设国家级密码科研实验平台的高校之一，
+                建有国家卓越工程师学院、教育部集成攻关大平台、首批来华留学示范基地。
+            </p>
+        </section>
+        <section class="info-table">
+            <h2>2026年硕士研究生招生计划</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>学院</th>
+                            <th>专业代码</th>
+                            <th>专业名称</th>
+                            <th>拟招生人数</th>
+                            <th>学制</th>
+                            <th>统考科目</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>计算机科学与技术学院</td>
+                            <td>081200</td>
+                            <td>计算机科学与技术</td>
+                            <td>120</td>
+                            <td>3年</td>
+                            <td>数一、英一、 政治</td>
+                        </tr>
+                        <tr>
+                            <td>电子工程学院</td>
+                            <td>080900</td>
+                            <td>电子科学与技术</td>
+                            <td>150</td>
+                            <td>3年</td>
+                            <td>数一、英一、 政治</td>
+                        </tr>
+                        <!-- 更多行数据... -->
+                    </tbody>
+                </table>
+            </div>
         </section>
 
-        <section class="add-info">
-            <h2>添加信息</h2>
-            <form id="info-form">
-                <div class="form-group">
-                    <label for="title">标题</label>
-                    <input type="text" id="title" required>
-                </div>
 
-                <div class="form-group">
-                    <label for="content">内容</label>
-                    <textarea id="content" rows="5" required></textarea>
-                </div>
-
-                <button type="submit">提交信息</button>
-            </form>
-        </section>
-
-        <section class="display-info" id="display-area">
-            <!-- 这里会显示添加的信息 -->
-        </section>
     </main>
+    <section class="downloads">
+    <h2>资料下载</h2>
+    <ul>
+        <!-- 云文件下载（示例） -->
+        <li>
+            <a href="https://github.com/yc0203/mypdf/blob/cc9b189b7665657db27614a5c3b28a0e8ecbc157/811%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F%E3%80%81%E7%94%B5%E8%B7%AF.pdf?raw=true" class="download-btn" download="ai.pdf">811信号与系统、电路分析</a>
+        </li>
+
+    </ul>
+</section>
 
     <footer>
-        <p>&copy; 2023 我的学校信息网站</p>
+        <p>&copy; 2025 学校信息网站</p>
     </footer>
 
     <script>
