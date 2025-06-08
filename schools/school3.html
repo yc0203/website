@@ -8,48 +8,83 @@
 </head>
 <body>
     <header>
+        <div class="logo-container">
+        <img src="https://github.com/yc0203/ycimages/blob/e8d23b3658b72d69cb6a1d58856e0e221b0132b7/img/%E8%81%94%E6%83%B3%E6%88%AA%E5%9B%BE_20250608195759.png?raw=true"
+             alt="西北工业大学"
+             class="avatar"> <!-- 允许跨域资源校验 -->
         <h1>西北工业大学</h1>
+        </div>
+        <!-- 新增：官网跳转链接（固定在右上角） -->
+        <div class="official-links">
+        <!-- 主官网链接 -->
+        <a href="https://yzb.nwpu.edu.cn/info/1175/8638.htm" class="official-link" target="_blank">
+            招生简章
+        </a>
+        <!-- 新增研究生院链接 -->
+        <a href="https://yzb.nwpu.edu.cn/info/1193/9338.htm" class="official-link graduate-link" target="_blank">
+            自命题考试大纲
+        </a>
+    </div>
     </header>
-
     <nav>
         <ul>
             <li><a href="../index.html">返回首页</a></li>
-            <li><a href="school2.html">西安电子科技</a></li>
-            <li><a href="school3.html">电子科技大学</a></li>
+            <li><a href="school1.html">西安电子科技大学</a></li>
+            <li><a href="school2.html">电子科技大学</a></li>
+            <li><a href="school4.html">西北大学</a></li>
         </ul>
     </nav>
 
     <main>
         <section class="school-info">
             <h2>学校简介</h2>
-            <p>清华大学是中国著名高等学府，坐落于北京西北郊风景秀丽的清华园。</p>
-            <p>创建于1911年，是中华人民共和国教育部直属的全国重点大学。</p>
+            <p>西北工业大学，简称“西工大”，坐落于陕西西安，隶属于工业和信息化部，中央直管高校，是一所以航空、航天、航海（三航）等领域人才培养和科学研究为发展特色的全国重点大学；位列国家“双一流”、“985工程”、“211工程”，“七五”“八五”均被国务院列为国家重点建设高校之一，入选“2011计划”、“111计划”、“卓越工程师教育培养计划” 、“卓越大学联盟”成员高校、“一带一路”航天创新联盟发起高校、全国毕业生就业典型经验高校，全国首批牵头建设国家卓越工程师学院的十所高校之一，是连续两次被授予“重大贡献奖”的高校。
+            </p>
+        </section>
+        <section class="info-table">
+            <h2>2026年硕士研究生招生计划</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>学院</th>
+                            <th>学制</th>
+                            <th>统考科目</th>
+                            <th>初试科目</th>
+                            <th>复试科目</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>电子信息学院</td>
+                            <td>全日制</td>
+                            <td>数一、英一、政治</td>
+                            <td>信号与系统827</td>
+                            <td>电路，模电，数电3选2</td>
+                        </tr>
+
+                        <!-- 更多行数据... -->
+                    </tbody>
+                </table>
+            </div>
         </section>
 
-        <section class="add-info">
-            <h2>添加信息</h2>
-            <form id="info-form">
-                <div class="form-group">
-                    <label for="title">标题</label>
-                    <input type="text" id="title" required>
-                </div>
 
-                <div class="form-group">
-                    <label for="content">内容</label>
-                    <textarea id="content" rows="5" required></textarea>
-                </div>
-
-                <button type="submit">提交信息</button>
-            </form>
-        </section>
-
-        <section class="display-info" id="display-area">
-            <!-- 这里会显示添加的信息 -->
-        </section>
     </main>
+    <section class="downloads">
+    <h2>资料下载</h2>
+    <ul>
+        <!-- 云文件下载（示例） -->
+        <li>
+            <a href="https://github.com/yc0203/mypdf/blob/6606b6c272e4c5d8e8b5bfcc3c292094f218a9a0/827%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F.doc?raw=true" class="download-btn" download="ai.pdf">827信号与系统</a>
+        </li>
+
+
+    </ul>
+</section>
 
     <footer>
-        <p>&copy; 2023 我的学校信息网站</p>
+        <p>&copy; 2025 学校信息网站</p>
     </footer>
 
     <script>
